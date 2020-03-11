@@ -8,18 +8,15 @@ public class sorular {
 		this.soru = "";
 		this.siklar = "";
 	}
-<<<<<<< HEAD
 	// fonksiyon i�erisine aktarmak i�in   
 	public sorular (String soru, String siklar ) {
-=======
-	// fonksiyon içerisine aktarmak için   
+	// fonksiyon icerisine aktarmak icin   
 	public soru (String soru, String siklar ) {
->>>>>>> 67f52effead225f34f8bcd6305e1cb14a6d184d6
 		this.soru = soru;
 		this.siklar = siklar;
 	}
 	
-	//sorularý get ve set metodlarý ile çagýrmak için hazýrlandý.
+	//sorulari get ve set metodlari ile cagirmak icin hazirlandi.
 	public String getSoru() {
 		return soru ;
 	}

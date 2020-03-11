@@ -17,7 +17,7 @@ public class Banka {
 	static Scanner alInput = new Scanner(System.in);
 	// Main 
 	public static void main(String args[]) {
-		// sorular için bir dizi 
+		// sorular icin bir dizi 
 		sorular = new vector <>();
 		
 		
@@ -43,7 +43,7 @@ public class Banka {
 		System.out.print("* Seçiminiz: ");
 	}
 	
-	// seçim alma metodu
+	// secim alma metodu
 	private static Secenek secimiAl() {		
 		Secenek secilen = Secenek.sYok; 
 		int secim = input.nextInt();
@@ -65,7 +65,7 @@ public class Banka {
 		}
 		return secilen;
 	}
-	//seçimi çalýþtýrma metodu
+	//secimi çalýþtýrma metodu
 	private static void secimiCalistir(Secenek secim) {
 		switch (secim) {
 			case sEkle:
@@ -82,6 +82,40 @@ public class Banka {
 		}
 		
 	}
+	// soru silme metodu
+	private static void soruSil() {
+		System.out.print("Silinecek sorunun indeksini giriniz: ");
+		int index = alInput.nextInt();
+		if(index > sorular.size()) {
+			System.out.println("Böyle bir soru yok!");
+		}else {
+			Soru s = sorular.get(index-1);
+			sorular.remove(index-1);
+			System.out.println(s+" --> sorusu silindi \n\n\n");
+		}
+	}
+	//soru ekleme metodu
+	private static void soruEkle() {
+		 soru s = new soru();
+		
+		System.out.println("Eklenecek soruyu yazýnýz: ");
+		
+		System.out.print("Soru: ");
+		String soru = alInput.next().trim();
+		s.setSoru(soru);
+		
+		System.out.print("siklar: ");
+		String siklar = alInput.next().trim();
+		s.setSiklar(siklar);
+		
+		sorular.add(s);
+		
+		System.out.println(" soru eklendi \n\n\n");
+		
+	}
+
+}
+	//sorularý listeleme metodu
 	private static void sorularýListele() {
 		int i = 1;
 		System.out.println("\n--------Sorular-------\n\n");
@@ -90,37 +124,5 @@ public class Banka {
 			i++;
 		}
 		System.out.println("\n-------------------------\n\n");
-	}
-
-	
-	private static void soruSil() {
-		System.out.print("Silinecek sorunun indeksini giriniz: ");
-		int index = alInput.nextInt();
-		if(index > sorular.size()) {
-			System.out.println("Böyle bir soru yok!");
-		}else {
-			Soru k = sorular.get(index-1);
-			sorular.remove(index-1);
-			System.out.println(k+" -->  silindi \n\n\n");
-		}
-	}
-	private static void soruEkle() {
-		 soru = new soru();
-		
-		System.out.println("Eklenecek soruyu yazýnýz: ");
-		
-		System.out.print("Soru: ");
-		String soru = alInput.next().trim();
-		k.setSoru(soru);
-		
-		System.out.print("siklar: ");
-		String siklar = alInput.next().trim();
-		k.setSiklar(siklar);
-		
-		sorular.add(k);
-		
-		System.out.println(" soru eklendi \n\n\n");
-		
-	}
-
 }
+

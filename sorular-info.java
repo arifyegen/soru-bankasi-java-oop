@@ -8,13 +8,13 @@ public class sorular {
 		this.soru = "";
 		this.siklar = "";
 	}
-	// fonksiyon içerisine aktarmak için   
+	// fonksiyon iÃ§erisine aktarmak iÃ§in   
 	public soru (String soru, String siklar ) {
 		this.soru = soru;
 		this.siklar = siklar;
 	}
 	
-	//soruları get ve set metodları ile çagırmak için hazırlandı.
+	//sorularÃ½ get ve set metodlarÃ½ ile Ã§agÃ½rmak iÃ§in hazÃ½rlandÃ½.
 	public String getSoru() {
 		return soru ;
 	}
@@ -27,5 +27,5 @@ public class sorular {
 	public void setSiklar() {
 		this.siklar=siklar;
 	}
-	//Override araştır?
+	//Override arastir?
 }

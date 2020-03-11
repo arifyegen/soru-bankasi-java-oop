@@ -1,4 +1,4 @@
-package sorular;
+package soruBankasý;
 
 public class sorular {
 	private String soru;
@@ -9,7 +9,7 @@ public class sorular {
 		this.siklar = "";
 	}
 	// fonksiyon içerisine aktarmak için   
-	public soru (String soru, String siklar ) {
+	public sorular (String soru, String siklar ) {
 		this.soru = soru;
 		this.siklar = siklar;
 	}
@@ -18,13 +18,13 @@ public class sorular {
 	public String getSoru() {
 		return soru ;
 	}
-	public void setSoru() {
+	public void setSoru(String soru) {
 		this.soru = soru;
 	}
 	public String getSiklar() {
 		return siklar;
 	}
-	public void setSiklar() {
+	public void setSiklar(String sikler) {
 		this.siklar=siklar;
 	}
 	//Override araþtýr?

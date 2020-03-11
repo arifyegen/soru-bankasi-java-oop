@@ -11,13 +11,16 @@ public class Banka {
 	sYok,
 	son,
 }
-	static Vector<Kisi> sorular = null;
+	// nesneyi dizi olarak atadýk
+	static Vector<soru> sorular = null;
 	// Kalvyeden veri alýmý 
 	static Scanner alInput = new Scanner(System.in);
 	// Main 
 	public static void main(String args[]) {
-		
+		// sorular için bir dizi 
 		sorular = new vector <>();
+		
+		
 		Secenek secim = Secenek.sYok;
 		
 		do {
@@ -27,7 +30,7 @@ public class Banka {
 		}while (secim != Secenek.CIKIS);
 		
 	}
-	private static void ekranaSecimListesiniGetir() {
+	private static void ekranSecimListesiGetir() {
 		
 		System.out.println("*************************");
 		System.out.println("*                       *");
@@ -39,38 +42,39 @@ public class Banka {
 		System.out.println("*************************");
 		System.out.print("* Seçiminiz: ");
 	}
-	private static Secenek secimiAl() {
-		// TODO Auto-generated method stub
-		
+	
+	// seçim alma metodu
+	private static Secenek secimiAl() {		
 		Secenek secilen = Secenek.sYok; 
 		int secim = input.nextInt();
 		switch (secim) {
 			case 1:
-				secilen = Secenek.EKLE;
+				secilen = Secenek.sEkle;
 				break;
 			case 2:
-				secilen = Secenek.SIL;
+				secilen = Secenek.sSil;
 				break;
 			case 3:
-				secilen = Secenek.LISTELE;
+				secilen = Secenek.sListele;
 				break;
 			case 4:
-				secilen = Secenek.CIKIS;
+				secilen = Secenek.son;
 				break;
 			default:
 				break;
 		}
 		return secilen;
 	}
+	//seçimi çalýþtýrma metodu
 	private static void secimiCalistir(Secenek secim) {
 		switch (secim) {
-			case EKLE:
+			case sEkle:
 				soruEkle();
 				break;
-			case SIL:
+			case sSil:
 				soruSil();
 				break;
-			case LISTELE:
+			case sListele:
 				sorularýListele();
 				break;
 			default:
@@ -78,6 +82,17 @@ public class Banka {
 		}
 		
 	}
+	private static void sorularýListele() {
+		int i = 1;
+		System.out.println("\n--------Sorular-------\n\n");
+		for (Soru soru : sorular) {
+			System.out.println(i+"->"+soru);
+			i++;
+		}
+		System.out.println("\n-------------------------\n\n");
+	}
+
+	
 	private static void soruSil() {
 		System.out.print("Silinecek sorunun indeksini giriniz: ");
 		int index = alInput.nextInt();

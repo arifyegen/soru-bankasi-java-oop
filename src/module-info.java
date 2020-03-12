@@ -1,16 +1,16 @@
-package sorular;
+package soruBankasi;
 
-public class soruBanka {
+public class soruBankasi {
 	private String soru;
 	private String siklar;
 	// constructor eklemdi
-	public soruBanka () {
+	public soruBankasi () {
 		this.soru = "";
 		this.siklar = "";
 	}
 	
 	// fonksiyon içerisine aktarmak için   
-	public soruBanka (String soru, String siklar ) {
+	public soruBankasi (String soru, String siklar ) {
 		this.soru = soru;
 		this.siklar = siklar;
 	}

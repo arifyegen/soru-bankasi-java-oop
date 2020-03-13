@@ -35,7 +35,28 @@ public class SoruBankası{
 		System.out.println("-------------------------");
 		System.out.print("* Se�iminiz: ");
     }
-
+     
+    private static secenek secimAl(){
+         secenek secim= secenek.YAPILMADI;
+         int secim = input.nextInt();
+         switch(secim){
+             case 1:
+                 secilen = secenek.EKLE;
+                 break;
+             case 2:
+                 secilen = secenek.SIL;
+                 break;
+             case 3:
+                 secilen = secenek.LISTELE;
+                 break;
+             case 4:
+                 secilen =secenek.CIKIS;
+                 break;
+             default:
+                 break;
+         }
+         return secilen;
+     }
     
     
     

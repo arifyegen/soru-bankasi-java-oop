@@ -5,7 +5,7 @@ import java.util.*;
 
 public class SoruBankası{
     
-    enum Secenek {YAPILMADI,EKLE,SİL,LİSTELE,CIKIS}
+    static enum secenek {YAPILMADI,EKLE,SİL,LİSTELE,CIKIS}
    
     static String[] sorular;
     static Scanner input =new Scanner(System.in);
@@ -18,7 +18,7 @@ public class SoruBankası{
         do{
             ekranaSecimleriListele();
             secim = secimAl();
-            secımıCalistir(secim);
+            secimiCalistir(secim);
         }while (secim != secenek.CIKIS);
         
         }
@@ -57,7 +57,7 @@ public class SoruBankası{
          }
          return secilen;
      }
-    private static void secimCalıstır(secenek secim){
+    private static void secimiCalistir(secenek secim){
         switch (secim){
         
             case EKLE:

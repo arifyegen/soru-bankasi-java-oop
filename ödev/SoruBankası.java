@@ -57,6 +57,32 @@ public class SoruBankası{
          }
          return secilen;
      }
+    private static void secimCalıstır(secenek secim){
+        switch (secim){
+        
+            case EKLE:
+                sEkle();
+                break;
+            case SIL:
+                sSil();
+                break;
+            case LISTELE:
+                sListele();
+                break;
+            default :
+                break;
+        }
+    }
+    // for hatası çözülecek 
+    private static void sListele(){
+        int i=0;
+        System.out.println("\n------------sorular---------");
+        for (Soru soru : sorular){
+            System.out.println(i+"->"+soru);
+            i++;
+        }
+        System.out.println("\n----------------------------\n\n");
+    }
     
     
     

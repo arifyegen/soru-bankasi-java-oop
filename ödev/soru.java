@@ -1,6 +1,5 @@
-package odev;
-import java.util.*;
-
+package proje1;
+// sadece bir soru üzerinde duruyoruz burada 
 public class Soru{
     private String soru;
     private int zorluk;

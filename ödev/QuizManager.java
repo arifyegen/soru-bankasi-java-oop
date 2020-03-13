@@ -1,3 +1,5 @@
+package proje1;
+// burada tüm sorular ve cevaplar üzerinde duruyoruyz
 public class QuizManager{
     
     private String sorular;

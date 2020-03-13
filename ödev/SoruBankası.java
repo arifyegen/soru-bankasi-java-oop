@@ -1,12 +1,34 @@
-package ödev;
+package proje1;
+
+
 import java.util.*;
-import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
 
 public class SoruBankası{
-    String[] sorular;
-    Scanner input = new Scanner();
+    
+    enum Secenek {YAPILMADI,EKLE,SİL,LİSTELE,CIKIS}
+   
+    static String[] sorular;
+    static Scanner input =new Scanner(System.in);
+
+    
+     public static void main(String[] args) {
+        sSil();
+        sEkle();
+        secenek secim = secenek.YAPILMADI;
+        do{
+            ekranaSecimleriListele();
+            secim = secimAl();
+            secımıCalistir(secim);
+        }while (secim != secenek.CIKIS);
+        
+        }
+     
+    
+
     
     
+    
+    //soru ekleme metodu 
     public static  void sEkle(){
         
         System.out.println("sorunun bilgilerini giriniz: ");
@@ -29,6 +51,7 @@ public class SoruBankası{
         System.out.println("doğru cevap: \n a: Asikki, b:B sikki, c:C sikki, d:D sikki\n");       
         char dCevap =input.next().trim();
     }
+    //soru silme metodu eklendi 
     private static void sSil() {
         Soru s = new Soru();
         Scanner input = new Scanner();
@@ -43,10 +66,4 @@ public class SoruBankası{
 		}
 	}
     
-    public static void main(String[] args) {
-       // sEkle();
-        sSil();
-        sEkle();
-		
-        }
-    }
+}

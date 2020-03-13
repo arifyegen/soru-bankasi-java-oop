@@ -24,6 +24,17 @@ public class SoruBankası{
         }
      
     
+     private static void ekranaSecimleriListele(){
+                System.out.println("-------------------------");
+		System.out.println("|                       |");
+		System.out.println("| 1. Soru Ekle          |");
+		System.out.println("| 2. Soru Sil           |");
+		System.out.println("| 3. Sorulari Listele   |");
+		System.out.println("| 4. Cikis              |");
+		System.out.println("|                       |");
+		System.out.println("-------------------------");
+		System.out.print("* Se�iminiz: ");
+    }
 
     
     

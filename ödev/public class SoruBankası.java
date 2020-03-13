@@ -1,16 +1,16 @@
-package odev;
+package ödev;
 import java.util.*;
 import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
 
 public class SoruBankası{
     String[] sorular;
     Scanner input = new Scanner();
-
     
-    public  void sEkle(){
+    
+    public static  void sEkle(){
+        
+        System.out.println("sorunun bilgilerini giriniz: ");
         Soru s = new Soru();
-		
-		System.out.println("sorunun bilgilerini giriniz: ");
 		
 		System.out.print("soru: ");
 		String soru = input.next().trim();
@@ -25,16 +25,28 @@ public class SoruBankası{
         System.out.println(" zorluk: \n 1: kolay 2: orta 3: zor \n");
         int zorluk = input.nextInt();
         s.setZorluk(zorluk);
-        System.out.println("doğru cevap: \n a: Asikki, b:B sikki, c:C sikki, d:D sikki\n");
-        
+
+        System.out.println("doğru cevap: \n a: Asikki, b:B sikki, c:C sikki, d:D sikki\n");       
         char dCevap =input.next().trim();
-        
-		
-		
     }
+    private static void sSil() {
+        Soru s = new Soru();
+        Scanner input = new Scanner();
+		System.out.print("Silinecek sorunun indeksini giriniz: ");
+		int index = input.nextInt();
+		if(index > sorular.size()) {
+			System.out.println("Kayit silinemedi!");
+		}else {
+			Soru s = sorular.get(index-1);
+			sorular.remove(index-1);
+			System.out.println(s+" --> Kayd silindi \n\n\n");
+		}
+	}
     
     public static void main(String[] args) {
-		sEkle();
+       // sEkle();
+        sSil();
+        sEkle();
 		
         }
     }

@@ -130,8 +130,18 @@ public class SoruBankası{
 
     //metin içinde arama yapma metodu eklenecek
     public static void metinIci(){
-
-    }
+        for (int i =0;i<sorular.length;i++)
+        {
+            sorular srlr = new sorular[i];
+            System.out.println("lutfen aramak istediginiz cumleyi giriniz");
+            String metinAl = input.nextLine().trim();
+            if (srlr.contains(metinAl) == true)
+            {
+                System.out.println("girilen kelime ile ilgili sorular");
+                System.out.println(srlr.contains(metinAl));
+            }
+            System.out.println("böyle bi cumle bulunmamakta");
+        }
     //sik metni icinde arama yapma metodu eklenecek 
     public static void sikMetinIci(){
 

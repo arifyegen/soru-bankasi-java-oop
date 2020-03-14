@@ -6,6 +6,8 @@ import java.util.*;
 
 import org.graalvm.compiler.nodes.NodeView.Default;
 
+import sun.security.provider.JavaKeyStore.CaseExactJKS;
+
 public class SoruBankası{
     
     static enum secenek {YAPILMADI,EKLE,SİL,LİSTELE,CIKIS}
@@ -138,9 +140,27 @@ public class SoruBankası{
     public static void dogruSikIci(){
         System.out.println("lutfen Hangi sikki istediginizi belirtiniz");
         String sikAl = input.nextLine().trim();
-
-
-        
+        for (int i = 0;i<sorular.length;i++){
+            switch(sikAl){
+                case(a && A):
+                {
+                     System.out.println(sorular.dCevap[i]);
+                }
+                case(b && B):
+                {
+                    System.out.println(sorular.dCevap[i]);
+                }
+                case(c && C):
+                {
+                    System.out.println(sorular.dCevap[i]);
+                }
+                case(d && D):
+                {
+                    System.out.println(sorular.dCevap[i]);
+                }
+            }
+            
+        }
     }
     //zorluk seviyesine göre siralandirma eklendi
     public static void puanIci(){

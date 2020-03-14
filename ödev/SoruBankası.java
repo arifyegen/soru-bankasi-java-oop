@@ -128,7 +128,7 @@ public class SoruBankası{
        
     }
 
-    //metin içinde arama yapma metodu eklenecek
+    //metin içinde arama yapma metodu
     public static void metinIci(){
         for (int i =0;i<sorular.length;i++)
         {

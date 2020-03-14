@@ -128,11 +128,11 @@ public class SoruBankası{
        
     }
 
-    //metin içinde arama yapma metodu 
+    //metin içinde arama yapma metodu eklenecek
     public static void metinIci(){
 
     }
-    //sik metni icinde arama yapma metodu
+    //sik metni icinde arama yapma metodu eklenecek 
     public static void sikMetinIci(){
 
     }
@@ -141,20 +141,20 @@ public class SoruBankası{
         System.out.println("lutfen Hangi sikki istediginizi belirtiniz");
         String sikAl = input.nextLine().trim();
         for (int i = 0;i<sorular.length;i++){
-            switch(sikAl){
-                case(a && A):
+            switch(sikAl.toLowerCase()){
+                case(a):
                 {
                      System.out.println(sorular.dCevap[i]);
                 }
-                case(b && B):
+                case(b):
                 {
                     System.out.println(sorular.dCevap[i]);
                 }
-                case(c && C):
+                case(c):
                 {
                     System.out.println(sorular.dCevap[i]);
                 }
-                case(d && D):
+                case(d):
                 {
                     System.out.println(sorular.dCevap[i]);
                 }

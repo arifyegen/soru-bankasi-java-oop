@@ -84,13 +84,13 @@ public class SoruBankası{
         }
         System.out.println("\n----------------------------\n\n");
     }
-    // sorunun içinde arama metodu düzeltilecek 
+    // sorunun içinde arama metodu duzeltilecek 
     public static void sIcindeListele(){
-        System.out.println("lütfen hangi katagoride seçim yapacaksanız giriniz");
+        System.out.println("lutfen hangi katagoride seçim yapacaksanız giriniz");
         System.out.println("1. Soru metni içinde arama");
         System.out.println("2. Soru şıklarının metinleri içinde");
-        System.out.println("3. Doğru şıkları üzerinden arama ");
-        System.out.println("4. Puan üzerinden arama");
+        System.out.println("3. Doğru şıkları uzerinden arama ");
+        System.out.println("4. Puan uzerinden arama");
         System.out.println("5. Zorluk derecesinden arama");
         final int ara = input.nextInt();
 
@@ -129,9 +129,12 @@ public class SoruBankası{
 
     }
     public static void puanIci(){
+        System.out.println("lutfen arama yapmak istediginiz puani giriniz");
+
+
 
     }
-    // zorluk seviyesine göre sıralndırıldı 
+    // zorluk seviyesine göre sıralndırıldı algoritma incelenecek
     public static void zorlukIci(){
         System.out.println("lutfen zorluk derecesini belirtiniz");
         System.out.println("kolay icin 1");
@@ -142,7 +145,7 @@ public class SoruBankası{
             case(1):
             for (int i = 0;i<sorular.length;i++)
             {
-                if (zorluk == 1){
+                if (soru.zorluk[i] == 1){
                 System.out.println("zor soru numaraları" +sorular[i]);
                 } else {
                     System.out.println("bu derece zorlukta bir soru yazılmadı");
@@ -151,7 +154,7 @@ public class SoruBankası{
             case(2):
             for (int i = 0;i<sorular.length;i++)
             {
-                if (zorluk == 2){
+                if (soru.zorluk[i] == 2){
                 System.out.println("zor soru numaraları" +sorular[i]);
                 } else {
                     System.out.println("bu derece zorlukta bir soru yazılmadı");
@@ -160,15 +163,14 @@ public class SoruBankası{
             case(3):
             for (int i = 0;i<sorular.length;i++)
             {
-                if (zorluk == 3){
+                if (soru.zorluk[i] == 3){
                 System.out.println("zor soru numaraları" +sorular[i]);
                 } else {
                     System.out.println("bu derece zorlukta bir soru yazılmadı");
                 }
-                break;
-            }    
+            }break;
             default:
-            break;
+                break;
         }
 
     //soru ekleme metodu 

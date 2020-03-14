@@ -128,8 +128,21 @@ public class SoruBankası{
     public static void dogruSikIci(){
 
     }
+    //zorluk seviyesine göre siralandirma eklendi
     public static void puanIci(){
-        System.out.println("lutfen arama yapmak istediginiz puani giriniz");
+        System.out.println("lutfen arama yapmak istediginiz puani giriniz (10,20,30)");
+        int pAl = input.nextInt();
+            for (int i = 0 ; i< sorular.length;i++){
+                if (soru.puani == 10){
+                    System.out.println(soru[i]);
+                }else if(soru.puani == 20){
+                    System.out.println(soru[i]);
+                }else if (soru.puani[i]){
+                     System.out.println(soru[i]);
+                }else{
+                     System.out.println(pAl+"bu seviyede bir zorluk nulunamadi");
+                }
+            }    
 
 
 

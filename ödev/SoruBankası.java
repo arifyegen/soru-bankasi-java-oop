@@ -1,4 +1,3 @@
-
 package proje1;
 
 
@@ -27,7 +26,7 @@ public class SoruBankası{
      
     
      private static void ekranaSecimleriListele(){
-                System.out.println("-------------------------");
+        System.out.println("-------------------------");
 		System.out.println("|                       |");
 		System.out.println("| 1. Soru Ekle          |");
 		System.out.println("| 2. Soru Sil           |");
@@ -68,10 +67,21 @@ public class SoruBankası{
                 sSil();
                 break;
             case LISTELE:
-                sListele();
+                listeListeleme();
                 break;
             default :
                 break;
+        }
+    }
+    private static void listeListeleme(){
+        System.out.println("listeleme seklini giriniz");
+        System.out.println("sorulari listelemek icin 1");
+        System.out.println("bir kritere göre listeleme icin 2");
+        int listeIcınAl = input.nextInt();
+        if (listeIcınAl == 1){
+            sListele();
+        }else{
+            sIcindeListele();
         }
     }
     // soruları listeleme metodu 
@@ -126,7 +136,11 @@ public class SoruBankası{
     }
     //dogru sik icinde arama 
     public static void dogruSikIci(){
+        System.out.println("lutfen Hangi sikki istediginizi belirtiniz");
+        String sikAl = input.nextLine().trim();
 
+
+        
     }
     //zorluk seviyesine göre siralandirma eklendi
     public static void puanIci(){
@@ -143,11 +157,8 @@ public class SoruBankası{
                      System.out.println(pAl+"bu seviyede bir zorluk nulunamadi");
                 }
             }    
-
-
-
     }
-    // zorluk seviyesine göre sıralndırıldı algoritma incelenecek
+    // zorluk seviyesine göre sıralndırıldı algoritma incelenecek !!!
     public static void zorlukIci(){
         System.out.println("lutfen zorluk derecesini belirtiniz");
         System.out.println("kolay icin 1");

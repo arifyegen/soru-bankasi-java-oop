@@ -12,7 +12,7 @@ public class SoruBankası{
     static Scanner input =new Scanner(System.in);
 
     
-     public static void main(String[] args) {
+     public static void main(final String[] args) {
         secenek secim = secenek.YAPILMADI;
         do{
             ekranaSecimleriListele();
@@ -36,8 +36,8 @@ public class SoruBankası{
     }
      
     private static secenek secimAl(){
-         secenek secim= secenek.YAPILMADI;
-         int secim = input.nextInt();
+         final secenek secim= secenek.YAPILMADI;
+         final int secim = input.nextInt();
          switch(secim){
              case 1:
                  secilen = secenek.EKLE;
@@ -56,7 +56,7 @@ public class SoruBankası{
          }
          return secilen;
      }
-    private static void secimiCalistir(secenek secim){
+    private static void secimiCalistir(final secenek secim){
         switch (secim){
             case EKLE:
                 sEkle();
@@ -75,48 +75,95 @@ public class SoruBankası{
     private static void sListele(){
         int i=0;
         System.out.println("\n------------sorular---------");
-        for (Soru soru : sorular){
+        for (final Soru soru : sorular){
             System.out.println(i+"->"+soru);
             i++;
         }
         System.out.println("\n----------------------------\n\n");
     }
-    
-    
-    
+    // sorunun içinde arama metodu düzeltilecek 
+    public static void sIcindeListele(){
+        System.out.println("lütfen hangi katagoride seçim yapacaksanız giriniz");
+        System.out.println("1. Soru metni içinde arama");
+        System.out.println("2. Soru şıklarının metinleri içinde");
+        System.out.println("3. Doğru şıkları üzerinden arama ");
+        System.out.println("4. Puan üzerinden arama");
+        System.out.println("5. Zorluk derecesinden arama");
+        final int ara = input.nextInt();
+
+        switch(ara){
+            case(1):
+                metinIci();
+                break;
+            case(2):
+                sikMetinIci();
+                break;
+            case(3):
+                dogruSikIci();
+                break;
+            case(4):
+                puanIci();
+                break;
+            case(5):
+                zorlukIci();
+                break;        
+            default:
+                break;
+        }
+       
+    }
+
+    //metin içinde arama yapma metodu 
+    public static void metinIci(){
+
+    }
+    //sik metni icinde arama yapma metodu
+    public static void sikMetinIci(){
+
+    }
+    //dogru sik icinde arama 
+    public static void dogruSikIci(){
+
+    }
+    public static void puanIci(){
+
+    }
+    public static void zorlukIci(){
+        System.out.println("");
+    }
     //soru ekleme metodu 
     public static  void sEkle(){
         
         System.out.println("sorunun bilgilerini giriniz: ");
-        Soru s = new Soru();
+        final Soru s = new Soru();
 		
 		System.out.print("soru: ");
-		String soru = input.next().trim();
+		final String soru = input.next().trim();
 		s.setSoru(soru);
 		
         System.out.print("cevaplar: \n ***ilk girdi A sikki, ikinci girdi B sikki, ucuncu girdi C sikki, dorduncu girdi D sikki****\n");
-        String [] siklar;
+        final String [] siklar;
         for (int i =0;i<4;i++){
         siklar[i] = input.next().trim();    
         s.setCevaplar(siklar);
         }
         System.out.println(" zorluk: \n 1: kolay 2: orta 3: zor \n");
-        int zorluk = input.nextInt();
+        final int zorluk = input.nextInt();
         s.setZorluk(zorluk);
 
         System.out.println("doğru cevap: \n a: Asikki, b:B sikki, c:C sikki, d:D sikki\n");       
-        char dCevap =input.next().trim();
+        final char dCevap =input.next().trim();
     }
     //soru silme metodu eklendi 
     private static void sSil() {
-        Soru s = new Soru();
-        Scanner input = new Scanner();
+        final Soru s = new Soru();
+        final Scanner input = new Scanner();
 		System.out.print("Silinecek sorunun numarasını giriniz: ");
-		int index = input.nextInt();
+		final int index = input.nextInt();
 		if(index > sorular.size()) {
 			System.out.println("Soru silinemedi!");
 		}else {
-			Soru s = sorular.get(index-1);
+			final Soru s = sorular.get(index-1);
 			sorular.remove(index-1);
 			System.out.println(s+" --> Soru silindi \n\n\n");
 		}

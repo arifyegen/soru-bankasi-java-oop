@@ -1,3 +1,4 @@
+
 package proje1;
 
 
@@ -12,8 +13,6 @@ public class SoruBankası{
 
     
      public static void main(String[] args) {
-        sSil();
-        sEkle();
         secenek secim = secenek.YAPILMADI;
         do{
             ekranaSecimleriListele();

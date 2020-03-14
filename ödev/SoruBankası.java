@@ -2,7 +2,10 @@
 package proje1;
 
 
+import java.text.BreakIterator;
 import java.util.*;
+
+import org.graalvm.compiler.nodes.NodeView.Default;
 
 public class SoruBankası{
     
@@ -128,9 +131,46 @@ public class SoruBankası{
     public static void puanIci(){
 
     }
+    // zorluk seviyesine göre sıralndırıldı 
     public static void zorlukIci(){
-        System.out.println("");
-    }
+        System.out.println("lutfen zorluk derecesini belirtiniz");
+        System.out.println("kolay icin 1");
+        System.out.println("orta icin 2");
+        System.out.println("zor icin 3");
+        int zAl = input.nextInt();
+        switch(zAl){
+            case(1):
+            for (int i = 0;i<sorular.length;i++)
+            {
+                if (zorluk == 1){
+                System.out.println("zor soru numaraları" +sorular[i]);
+                } else {
+                    System.out.println("bu derece zorlukta bir soru yazılmadı");
+                }
+            }break;
+            case(2):
+            for (int i = 0;i<sorular.length;i++)
+            {
+                if (zorluk == 2){
+                System.out.println("zor soru numaraları" +sorular[i]);
+                } else {
+                    System.out.println("bu derece zorlukta bir soru yazılmadı");
+                }
+            }break;
+            case(3):
+            for (int i = 0;i<sorular.length;i++)
+            {
+                if (zorluk == 3){
+                System.out.println("zor soru numaraları" +sorular[i]);
+                } else {
+                    System.out.println("bu derece zorlukta bir soru yazılmadı");
+                }
+                break;
+            }    
+            default:
+            break;
+        }
+
     //soru ekleme metodu 
     public static  void sEkle(){
         

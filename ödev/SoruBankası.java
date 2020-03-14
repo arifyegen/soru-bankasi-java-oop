@@ -32,7 +32,7 @@ public class SoruBankası{
 		System.out.println("| 4. Cikis              |");
 		System.out.println("|                       |");
 		System.out.println("-------------------------");
-		System.out.print("* Se�iminiz: ");
+		System.out.print("* Seciminiz: ");
     }
      
     private static secenek secimAl(){
@@ -58,7 +58,6 @@ public class SoruBankası{
      }
     private static void secimiCalistir(secenek secim){
         switch (secim){
-        
             case EKLE:
                 sEkle();
                 break;
@@ -72,7 +71,7 @@ public class SoruBankası{
                 break;
         }
     }
-    // for hatası çözülecek 
+    // soruları listeleme metodu 
     private static void sListele(){
         int i=0;
         System.out.println("\n------------sorular---------");
@@ -112,14 +111,14 @@ public class SoruBankası{
     private static void sSil() {
         Soru s = new Soru();
         Scanner input = new Scanner();
-		System.out.print("Silinecek sorunun indeksini giriniz: ");
+		System.out.print("Silinecek sorunun numarasını giriniz: ");
 		int index = input.nextInt();
 		if(index > sorular.size()) {
-			System.out.println("Kayit silinemedi!");
+			System.out.println("Soru silinemedi!");
 		}else {
 			Soru s = sorular.get(index-1);
 			sorular.remove(index-1);
-			System.out.println(s+" --> Kayd silindi \n\n\n");
+			System.out.println(s+" --> Soru silindi \n\n\n");
 		}
 	}
     

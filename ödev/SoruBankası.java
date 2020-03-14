@@ -104,7 +104,7 @@ public class SoruBankası{
         System.out.println("3. Doğru şıkları uzerinden arama ");
         System.out.println("4. Puan uzerinden arama");
         System.out.println("5. Zorluk derecesinden arama");
-        final int ara = input.nextInt();
+        int ara = input.nextInt();
 
         switch(ara){
             case(1):

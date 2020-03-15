@@ -35,7 +35,7 @@ public class SoruBankası{
     }
      
     private static secenek secimAl(){
-         secenek secim= secenek.YAPILMADI;
+         secenek secilen= secenek.YAPILMADI;
          int secim= input.nextInt();
          switch(secim){
              case 1:

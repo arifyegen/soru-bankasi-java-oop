@@ -156,7 +156,7 @@ public class SoruBankası{
             {
                 System.out.println(cevaplar[i]);
             }else{
-                System.out.println("böyle bir cumle iceren sik bulunamadi ");
+                System.out.println("böyle bir cumle iceren sik bulunamadi");
             }
         }
     }

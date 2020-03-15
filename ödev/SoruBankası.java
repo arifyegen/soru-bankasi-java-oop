@@ -130,21 +130,35 @@ public class SoruBankası{
 
     //metin içinde arama yapma metodu
     public static void metinIci(){
+        sorular srlr = new sorular;
+        String metinAl = input.nextLine().trim();
+        System.out.println("lutfen aramak istediginiz cumleyi giriniz");
+        
         for (int i =0;i<sorular.length;i++)
         {
-            sorular srlr = new sorular[i];
-            System.out.println("lutfen aramak istediginiz cumleyi giriniz");
-            String metinAl = input.nextLine().trim();
-            if (srlr.contains(metinAl) == true)
+            if (srlr.contains(metinAl) == sorular[i].contains(metinAl))
             {
                 System.out.println("girilen kelime ile ilgili sorular");
-                System.out.println(srlr.contains(metinAl));
-            }
+                System.out.println(sorular[i]);
+            }else{
             System.out.println("böyle bi cumle bulunmamakta");
+                }
         }
+    }
     //sik metni icinde arama yapma metodu eklenecek 
     public static void sikMetinIci(){
-
+        cevaplar cvp = new cevaplar;
+        string cvpAl = input.nextLine().trim();
+        System.out.println("lütfen cevaplarda aramak istediginiz cumleyi giriniz ");
+        for (int i=0;i<cevaplar.length;i++)
+        {
+            if (cvp.contains(cvpAl) == cevaplar[i].contains(cvpAl))
+            {
+                System.out.println(cevaplar[i]);
+            }else{
+                System.out.println("böyle bir cumle iceren sik bulunamadi ");
+            }
+        }
     }
     //dogru sik icinde arama 
     public static void dogruSikIci(){

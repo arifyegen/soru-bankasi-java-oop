@@ -1,12 +1,7 @@
 package proje1;
 
 
-import java.text.BreakIterator;
 import java.util.*;
-
-import org.graalvm.compiler.nodes.NodeView.Default;
-
-import sun.security.provider.JavaKeyStore.CaseExactJKS;
 
 public class SoruBankası{
     
@@ -41,7 +36,7 @@ public class SoruBankası{
      
     private static secenek secimAl(){
          secenek secim= secenek.YAPILMADI;
-         int secim = input.nextInt();
+         int secim= input.nextInt();
          switch(secim){
              case 1:
                  secilen = secenek.EKLE;
@@ -130,13 +125,13 @@ public class SoruBankası{
 
     //metin içinde arama yapma metodu
     public static void metinIci(){
-        sorular srlr = new sorular;
-        String metinAl = input.nextLine().trim();
+        sorular srlr = new sorular[i];
+        String srlrAl = input.nextLine().trim();
         System.out.println("lutfen aramak istediginiz cumleyi giriniz");
         
         for (int i =0;i<sorular.length;i++)
         {
-            if (srlr.contains(metinAl) == sorular[i].contains(metinAl))
+            if (srlrAl == sorular[i].contains(metinAl))
             {
                 System.out.println("girilen kelime ile ilgili sorular");
                 System.out.println(sorular[i]);
@@ -147,12 +142,12 @@ public class SoruBankası{
     }
     //sik metni icinde arama yapma metodu eklenecek 
     public static void sikMetinIci(){
-        cevaplar cvp = new cevaplar;
+        cevaplar cvp = new cevaplar[i];
         string cvpAl = input.nextLine().trim();
         System.out.println("lütfen cevaplarda aramak istediginiz cumleyi giriniz ");
         for (int i=0;i<cevaplar.length;i++)
         {
-            if (cvp.contains(cvpAl) == cevaplar[i].contains(cvpAl))
+            if (cvpAl == cevaplar[i].contains(cvpAl))
             {
                 System.out.println(cevaplar[i]);
             }else{

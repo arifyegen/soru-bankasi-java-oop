@@ -2,7 +2,7 @@ package proje1;
 // burada tüm sorular ve cevaplar üzerinde duruyoruyz
 public class QuizManager{
     
-    private static String sorular;
+    private String sorular;
     private String cevaplar;
 
     public QuizManager(String sorular, String cevaplar){

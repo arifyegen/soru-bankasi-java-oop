@@ -231,10 +231,12 @@ public class SoruBankası{
                 } else {
                     System.out.println("bu derece zorlukta bir soru yazılmadı");
                 }
-            }break;
+            }
+            break;
             default:
-                break;
+            break;
         }
+    }
 
     //soru ekleme metodu 
     public static  void sEkle(){
@@ -261,14 +263,13 @@ public class SoruBankası{
     }
     //soru silme metodu eklendi 
     private static void sSil() {
-        Soru s = new Soru();
         Scanner input = new Scanner();
 		System.out.print("Silinecek sorunun numarasını giriniz: ");
 		int index = input.nextInt();
-		if(index > sorular.size()) {
+		if(index > sorular.length) {
 			System.out.println("Soru silinemedi!");
 		}else {
-			Soru s = sorular.get(index-1);
+			Sorular s = sorular.get(index-1);
 			sorular.remove(index-1);
 			System.out.println(s+" --> Soru silindi \n\n\n");
 		}

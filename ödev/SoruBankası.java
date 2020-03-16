@@ -5,7 +5,7 @@ import java.util.*;
 
 public class SoruBankası{
     
-    static enum secenek {YAPILMADI,EKLE,SİL,LİSTELE,CIKIS}
+    static enum secenek {YAPILMADI,BASLA,EKLE,SİL,LİSTELE,CIKIS}
    
     static String[] sorular;
     static Scanner input =new Scanner(System.in);
@@ -24,12 +24,11 @@ public class SoruBankası{
     
      private static void ekranaSecimleriListele(){
         System.out.println("-------------------------");
-		System.out.println("|                       |");
-		System.out.println("| 1. Soru Ekle          |");
-		System.out.println("| 2. Soru Sil           |");
-		System.out.println("| 3. Sorulari Listele   |");
-		System.out.println("| 4. Cikis              |");
-		System.out.println("|                       |");
+		System.out.println("| 1. Sorulara basla     |");
+		System.out.println("| 2. Soru Ekle          |");
+		System.out.println("| 3. Soru Sil           |");
+		System.out.println("| 4. Sorulari Listele   |");
+		System.out.println("| 5. Cikis              |");
 		System.out.println("-------------------------");
 		System.out.print("* Seciminiz: ");
     }
@@ -39,15 +38,18 @@ public class SoruBankası{
          int secim= input.nextInt();
          switch(secim){
              case 1:
+                secilen = secenek.BASLA;
+                break;
+             case 2:
                  secilen = secenek.EKLE;
                  break;
-             case 2:
+             case 3:
                  secilen = secenek.SIL;
                  break;
-             case 3:
+             case 4:
                  secilen = secenek.LISTELE;
                  break;
-             case 4:
+             case 5:
                  secilen =secenek.CIKIS;
                  break;
              default:
@@ -269,7 +271,7 @@ public class SoruBankası{
 		if(index > sorular.length) {
 			System.out.println("Soru silinemedi!");
 		}else {
-			Sorular s = sorular.get(index-1);
+			sorular s = sorular.get(index-1);
 			sorular.remove(index-1);
 			System.out.println(s+" --> Soru silindi \n\n\n");
 		}

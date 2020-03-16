@@ -100,6 +100,7 @@ public class SoruBankası{
             }else{
                 continue;
             }
+               
         }
     }
 
@@ -126,7 +127,7 @@ public class SoruBankası{
         System.out.println("\n----------------------------\n\n");
     }
     // sorunun içinde arama metodu duzeltilecek 
-    public static void sIcindeListele(){
+    private static void sIcindeListele(){
         System.out.println("lutfen hangi katagoride seçim yapacaksanız giriniz");
         System.out.println("1. Soru metni içinde arama");
         System.out.println("2. Soru şıklarının metinleri içinde");
@@ -158,7 +159,7 @@ public class SoruBankası{
     }
 
     //metin içinde arama yapma metodu
-    public static void metinIci(){
+    private static void metinIci(){
         sorular srlr = new sorular[i];
         String srlrAl = input.nextLine().trim();
         System.out.println("lutfen aramak istediginiz cumleyi giriniz");
@@ -175,7 +176,7 @@ public class SoruBankası{
         }
     }
     //sik metni icinde arama yapma metodu eklenecek 
-    public static void sikMetinIci(){
+    private static void sikMetinIci(){
         cevaplar cvp = new cevaplar[i];
         string cvpAl = input.nextLine().trim();
         System.out.println("lütfen cevaplarda aramak istediginiz cumleyi giriniz ");
@@ -190,7 +191,7 @@ public class SoruBankası{
         }
     }
     //dogru sik icinde arama 
-    public static void dogruSikIci(){
+    private static void dogruSikIci(){
         System.out.println("lutfen Hangi sikki istediginizi belirtiniz");
         String sikAl = input.nextLine().trim();
         for (int i = 0;i<sorular.length;i++){
@@ -216,7 +217,7 @@ public class SoruBankası{
         }
     }
     //zorluk seviyesine göre siralandirma eklendi
-    public static void puanIci(){
+    private static void puanIci(){
         System.out.println("lutfen arama yapmak istediginiz puani giriniz (10,20,30)");
         int pAl = input.nextInt();
             for (int i = 0 ; i< sorular.length;i++){
@@ -232,7 +233,7 @@ public class SoruBankası{
             }    
     }
     // zorluk seviyesine göre sıralndırıldı algoritma incelenecek !!!
-    public static void zorlukIci(){
+    private static void zorlukIci(){
         System.out.println("lutfen zorluk derecesini belirtiniz");
         System.out.println("kolay icin 1");
         System.out.println("orta icin 2");
@@ -273,7 +274,7 @@ public class SoruBankası{
     }
 
     //soru ekleme metodu 
-    public static  void sEkle(){
+    private static  void sEkle(){
         
         System.out.println("sorunun bilgilerini giriniz: ");
         Soru s = new Soru();

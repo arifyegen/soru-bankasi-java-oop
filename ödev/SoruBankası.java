@@ -75,10 +75,11 @@ public class SoruBankası{
                 break;
         }
     }
+    //sinava baslama metodu
     private static void sinavaBasla(){
+        int note=0,degisken;
         for (int i= 0; i<10; i++)
         {
-            int note=0,degisken;
             degisken = rand.nextInt(sorular.length);
             System.out.println(sorular[degisken]);
             char verilenCevap = input.nextLine().trim();
@@ -103,8 +104,7 @@ public class SoruBankası{
                
         }
     }
-
-
+    // listelem seçeneklerini listeleme metodu
     private static void listeListeleme(){
         System.out.println("listeleme seklini giriniz");
         System.out.println("sorulari listelemek icin 1");

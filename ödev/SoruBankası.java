@@ -10,7 +10,7 @@ public class SoruBankası{
     static String[] sorular;
     static Scanner input =new Scanner(System.in);
 
-    
+    //main fonk.
      public static void main(String[] args) {
         secenek secim = secenek.YAPILMADI;
         do{
@@ -20,8 +20,7 @@ public class SoruBankası{
         }while (secim != secenek.CIKIS);
         
         }
-     
-    
+    //seçimleri ekrana yazar
      private static void ekranaSecimleriListele(){
         System.out.println("-------------------------");
 		System.out.println("| 1. Sorulara basla     |");
@@ -32,7 +31,7 @@ public class SoruBankası{
 		System.out.println("-------------------------");
 		System.out.print("* Seciminiz: ");
     }
-     
+     //seçenekleri değişkenler atar 
     private static secenek secimAl(){
          secenek secilen= secenek.YAPILMADI;
          int secim= input.nextInt();
@@ -57,6 +56,7 @@ public class SoruBankası{
          }
          return secilen;
      }
+     //listenelen seçimleri çalıştırır
     private static void secimiCalistir(secenek secim){
         switch (secim){
             case BASLA:
@@ -157,7 +157,6 @@ public class SoruBankası{
         }
        
     }
-
     //metin içinde arama yapma metodu
     private static void metinIci(){
         sorular srlr = new sorular[i];
@@ -272,7 +271,6 @@ public class SoruBankası{
             break;
         }
     }
-
     //soru ekleme metodu 
     private static  void sEkle(){
         

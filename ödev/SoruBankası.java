@@ -38,7 +38,7 @@ public class SoruBankası{
          int secim= input.nextInt();
          switch(secim){
              case 1:
-                secilen = secenek.BASLA;
+                 secilen = secenek.BASLA;
                 break;
              case 2:
                  secilen = secenek.EKLE;
@@ -59,6 +59,9 @@ public class SoruBankası{
      }
     private static void secimiCalistir(secenek secim){
         switch (secim){
+            case BASLA:
+                sinavaBasla();
+                break;
             case EKLE:
                 sEkle();
                 break;
@@ -72,6 +75,35 @@ public class SoruBankası{
                 break;
         }
     }
+    private static void sinavaBasla(){
+        for (int i= 0; i<10; i++)
+        {
+            int note=0,degisken;
+            degisken = rand.nextInt(sorular.length);
+            System.out.println(sorular[degisken]);
+            char verilenCevap = input.nextLine().trim();
+            if (verilenCevap == cevaplar[degisken])
+            {
+                System.out.println("verilen cevap dogru");
+                note = note+ (get.zorluk*get.Puan);
+            }else{
+                System.out.println("verilen cevap dogru değildir");
+                System.out.println("dogru cevap"+get.cevaplar[degisken]);
+            }
+            if (note >= 100){
+                System.out.println("notunuz 100 olmuştur");
+                break;
+            }else if (i==9)
+            {
+                System.out.println("sınav bitmiştir"+note);
+                break;
+            }else{
+                continue;
+            }
+        }
+    }
+
+
     private static void listeListeleme(){
         System.out.println("listeleme seklini giriniz");
         System.out.println("sorulari listelemek icin 1");

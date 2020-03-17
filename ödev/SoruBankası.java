@@ -52,7 +52,7 @@ public class SoruBankası{
                  secilen =secenek.CIKIS;
                  break;
              default:
-                 break;
+                
          }
          return secilen;
      }
